@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <meta name="description" content="">
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- sidenav css -->
+    <link rel="stylesheet" type="text/css" href="css/sidenav/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/sidenav/component.css" />
+
+   <!-- navigation css -->
+    <link rel="stylesheet" href="css/nav/coreNavigation-1.0.2.css" />
+
+
+    <link rel="stylesheet" media="screen" href="css/style.css">
+</head>
+<body>
+
+<!-- navigation start -->
+
+    <section>
+        <div class="container">
+            <ul id="gn-menu" class="gn-menu-main">
+                <li class="gn-trigger">
+                    <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                    <nav class="gn-menu-wrapper">
+                        <div class="gn-scroller">
+                            <ul class="gn-menu">
+                                <li><a class="gn-icon gn-icon-help" href="index.html">Home</a></li>
+                                <!-- <li class="gn-search-item">
+                                    <input placeholder="Search" type="search" class="gn-search">
+                                    <a class="gn-icon gn-icon-search"><span>Search</span></a>
+                                </li> -->
+                                <li>
+                                    <a class="gn-icon gn-icon-download">My Profile</a>
+                                    <!-- <ul class="gn-submenu">
+                                        <li><a class="gn-icon gn-icon-illustrator">Vector Illustrations</a></li>
+                                        <li><a class="gn-icon gn-icon-photoshop">Photoshop files</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a class="gn-icon gn-icon-help">Notifications</a></li>
+                                <li>
+                                    <a class="gn-icon gn-icon-archive">Other Resources</a>
+                                    <ul class="gn-submenu">
+                                        <li><a class="gn-icon gn-icon-article">Syllabus</a></li>
+                                        <li><a class="gn-icon gn-icon-pictures">Notes</a></li>
+                                        <li><a class="gn-icon gn-icon-videos">Old Questions</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="gn-icon gn-icon-cog">Help</a></li>
+                                <li><a class="gn-icon gn-icon-cog sm-show">Logout</a></li>
+                                <li><a class="gn-icon gn-icon-cog">Settings</a></li>
+                            </ul>
+                        </div><!-- /gn-scroller -->
+                    </nav>
+                </li>
+                <li class="forum-wr"><a href="">BScCSIT Forum</a></li>
+                <!-- <li><a class="codrops-icon codrops-icon-prev" href=""><span>Previous Demo</span></a></li> -->
+                <li class="points-sm"><a class="codrops-icon codrops-icon-drop" href=""><span>1000 Points</span></a></li>
+                <li><a class="codrops-icon codrops-icon-drop" href=""><span>Logout</span></a></li>
+            </ul> 
+        </div>
+    </secction>
+
+<!-- navigation end -->
+
+
+<!-- main profile start -->
+
+<section class="wrapper-all">
+    <div class="user-banner">
+         <img src="images/banner.jpg" alt="banner">
+    </div>
+    <div class="user-desc">
+        <div class="container">
+            <div class="row">
+                <div class="user-wrapper clearfix">
+                    <div class="col-md-2 col-sm-4 col-xs-12">
+                        <div class="user-img">
+                            <img src="images/team1.png" alt="user">
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-sm-8 col-xs-12">
+                        <div class="user-details">
+                                <p><strong>Name:</strong>Sagun Maharjan</p>
+                                <p><strong>Email:</strong>maharjansagun121@outlook.com</p>
+                                <p><strong>Gender:</strong>Male</p>
+                                <p><strong>Institue:</strong>Prime College</p>
+                            
+                                <p><strong>Phone Number:</strong>9876543456</p>
+                        
+                                <p><strong>Address:</strong>1861 Bayonne Ave, Manchester Township</p>
+                            <a href="" class="edit-btn" data-toggle="modal" data-target="#profile_edit">Edit Profile</a>
+                            <a href="javascript:void(0)" class="edit-btn points-btn">1000 Points</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+      <div class="modal fade" id="profile_edit" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Edit Your Profile</h4>
+            </div>
+            <div class="modal-body">
+                <div class="signup-wr profile-edit">   
+                    <form>
+                        <label>
+                            <input type="text" placeholder="Full Name">
+                        </label>
+                        <label>
+                            <input type="text" placeholder="Username">
+                        </label>
+                        <label>
+                            <input type="email" placeholder="Email Address">
+                        </label>
+                        <label>
+                            <input type="text" placeholder="Phone number">
+                        </label>
+                        <label>
+                            <input type="password" placeholder="Password">
+                        </label>
+                        <label>
+                            <input type="password" placeholder="Confirm Password">
+                        </label>
+                    </form>
+                </div> 
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    <!-- search section start -->
+
+    <section class="search-section user-dash-search">
+        <div class="container">
+            <form class="search-form">
+                <div class="search-wr">
+                    <input type="text" placeholder="Enter Within Your Queries">
+                    <button type="text" class="search-btn">Search</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- search section end -->
+
+    <div class="user-history">
+        <div class="container">
+            <div class="row">
+                <div class="sem-tab">            
+                    <ul class="nav nav-pills sem-tab-head">
+                        <li class="active"><a data-toggle="pill" href="#recent">Questions I Have Asked</a></li>
+                        <li><a data-toggle="pill" href="#answered">Questions I Have Answered</a></li>
+                    </ul>
+                </div>
+
+                <div class="sem-tab-all">
+                    <div class="tab-content">
+                        <div id="recent" class="tab-pane fade in active">
+                            <div id="no-more-tables" class="table-content clearfix">
+                                <table class="col-md-12 table-bordered table-striped table-condensed cf question-table table-responsive">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="" class="question">What is Cloud Computing and its importance.</a>
+                                                <span class="asked">Asked on 30/09/2018</span>
+                                            </td>
+                                            <td class="numeric">subject</td>
+                                            <td class="numeric"><a href="" class="username">User Name</a></td>
+                                            <td class="numeric">12<br>Answers</td>
+                                            <td class="numeric">100<br>Views</td>                                    
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="" class="question">Differentiate between attributes and elements in XML? List some of the important attributesused in specifying elements in XML schema</a>
+                                                <span class="asked">Asked on 30/09/2018</span>
+                                            </td>
+                                            <td class="numeric">subject</td>
+                                            <td class="numeric"><a href="" class="username">User Name</a></td>
+                                            <td class="numeric">12<br>Answers</td>
+                                            <td class="numeric">100<br>Views</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="" class="question">Explain mobile computing architecture with suitable diagram.</a>
+                                                <span class="asked">Asked on 30/09/2018</span>
+                                            </td>
+                                            <td class="numeric">subject</td>
+                                            <td class="numeric"><a href="" class="username">User Name</a></td>
+                                            <td class="numeric">12<br>Answers</td>
+                                            <td class="numeric">100<br>Views</td>
+                                        </tr>
+                                         <tr>
+                                            <td>
+                                                <a href="" class="question">What do you mean by Teleports and terrestrial links? Explain.</a>
+                                                <span class="asked">Asked on 30/09/2018</span>
+                                            </td>
+                                            <td class="numeric">subject</td>
+                                            <td class="numeric"><a href="" class="username">User Name</a></td>
+                                            <td class="numeric">12<br>Answers</td>
+                                            <td class="numeric">100<br>Views</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="" class="question">Describe on behalf of the choice of hardware and software system.</a>
+                                                <span class="asked">Asked on 30/09/2018</span>
+                                            </td>
+                                            <td class="numeric">subject</td>
+                                            <td class="numeric"><a href="" class="username">User Name</a></td>
+                                            <td class="numeric">12<br>Answers</td>
+                                            <td class="numeric">100<br>Views</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <strong><a href="">View All</a></strong>
+                            </div>
+                        </div>
+                        <div id="answered" class="tab-pane fade">
+                            <div id="no-more-tables" class="table-content clearfix">
+                                <table class="col-md-12 table-bordered table-striped table-condensed cf question-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="" class="question">Differentiate between attributes and elements in XML? List some of the important attributes used in specifying elements in XML schema.</a>
+                                                <span class="asked">Asked on 30/09/2018</span>
+                                            </td>
+                                            <td class="numeric">subject</td>
+                                            <td class="numeric"><a href="" class="username">User Name</a></td>
+                                            <td class="numeric">12<br>Answers</td>
+                                            <td class="numeric">100<br>Views</td>                                    
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="" class="question">What do you mean by Teleports and terrestrial links? Explain.</a>
+                                                <span class="asked">Asked on 30/09/2018</span>
+                                            </td>
+                                            <td class="numeric">subject</td>
+                                            <td class="numeric"><a href="" class="username">User Name</a></td>
+                                            <td class="numeric">12<br>Answers</td>
+                                            <td class="numeric">100<br>Views</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="" class="question">Describe on behalf of the choice of hardware and software system.</a>
+                                                <span class="asked">Asked on 30/09/2018</span>
+                                            </td>
+                                            <td class="numeric">subject</td>
+                                            <td class="numeric"><a href="" class="username">User Name</a></td>
+                                            <td class="numeric">12<br>Answers</td>
+                                            <td class="numeric">100<br>Views</td>
+                                        </tr>
+                                         <tr>
+                                            <td>
+                                                <a href="" class="question">What do you mean by Teleports and terrestrial links? Explain.</a>
+                                                <span class="asked">Asked on 30/09/2018</span>
+                                            </td>
+                                            <td class="numeric">subject</td>
+                                            <td class="numeric"><a href="" class="username">User Name</a></td>
+                                            <td class="numeric">12<br>Answers</td>
+                                            <td class="numeric">100<br>Views</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="" class="question">Describe on behalf of the choice of hardware and software system.</a>
+                                                <span class="asked">Asked on 30/09/2018</span>
+                                            </td>
+                                            <td class="numeric">subject</td>
+                                            <td class="numeric"><a href="" class="username">User Name</a></td>
+                                            <td class="numeric">12<br>Answers</td>
+                                            <td class="numeric">100<br>Views</td>
+                                        </tr>
+                               
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>
+
+<!-- main profile end -->
+
+
+
+
+<!-- footer start -->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <a href="" class="footer-logo"><img src="images/logo.png" alt="logo"></a>
+                <p class="footer-about">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolor
+                </p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="footer-sec">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>   
+                        <li><a href="">Old Questions</a></li>
+                        <li><a href="">Notes</a></li>
+                        <li><a href="">Solutions</a></li>
+                        <li><a href="">Syllabus</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>   
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="footer-sec">
+                    <h3>Contact Us</h3>
+                    <span class="address">Bagbazar, Kathmandu, Nepal</span>
+                    <span class="phone">98766267839, 0983772727</span>
+                    <span class="email">someone@company.com</span>
+                    <h3 class="footer-follow">Follow us</h3>
+                    <div class="footer-social clearfix">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-instagram"></i></a>
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4 footer-copy">
+                <p>2018 Our Company. All rights reserved</p>
+            </div>
+        </div>
+    </div>    
+</div>
+
+
+<!-- footer end -->
+
+
+
+
+
+
+
+
+
+
+<!-- side navigation -->
+<script src="js/sidenav/classie.js"></script>
+<script src="js/sidenav/gnmenu.js"></script>
+<script>
+    new gnMenu( document.getElementById( 'gn-menu' ) );
+</script>
+
+
+<!-- tab js -->
+<script type="text/javascript" src="js/tab.js"></script>
+
+<!-- typer js -->
+<script type="text/javascript" src="js/typer.js"></script>
+
+<!-- scripts -->
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+
+<!-- navigation js -->
+    <script src="js/nav/coreNavigation-1.0.2.min.js"></script>
+    <script>
+        $('nav').coreNavigation({
+            menuPosition: "right", 
+            container: true
+        });
+    </script>
+
+</body>
+</html>

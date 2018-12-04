@@ -1,0 +1,88 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bsc Csit Forum | {% block title%} {% endblock%}</title>
+    <meta name="description" content="">
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- sidenav css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/component.css' %}" />
+
+   <!-- navigation css -->
+    <link rel="stylesheet" href="{% static 'css/coreNavigation-1.0.2.css' %}" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" media="screen" href="{% static 'css/style.css' %}">
+</head>
+
+
+<body>
+
+
+
+{% block body %}
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+{% include 'partials/footer.html' %}
+
+
+
+<!-- side navigation -->
+<script src="{% static 'js/sidenav/classie.js' %}"></script>
+<script src="{% static 'js/sidenav/gnmenu.js' %}"></script>
+<script>
+    new gnMenu( document.getElementById( 'gn-menu' ) );
+</script>
+
+
+
+<!-- tab js -->
+<script type="text/javascript" src="{% static 'js/tab.js' %}"></script>
+
+<!-- typer js -->
+<script type="text/javascript" src="{% static 'js/typer.js' %}"></script>
+
+<!-- scripts -->
+<script src="{% static 'js/particles.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+
+<!-- navigation js -->
+    <script src="{% static 'js/nav/coreNavigation-1.0.2.min.js' %}"></script>
+    <script>
+        $('nav').coreNavigation({
+            menuPosition: "right",
+            container: true
+        });
+    </script>
+
+</body>
+</html>

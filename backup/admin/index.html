@@ -1,0 +1,380 @@
+
+{% extends master/master.html %}
+{% load staticfiles %}
+
+
+{% block title%} Home {% endblock %}
+
+{% block body %}
+
+
+
+
+
+<!-- banner section start -->
+
+<section class="home-banner">
+    <div id="particles-js"></div>
+    <div class="container">   
+        <div class="banner-text">
+            <h1  class="typer">
+                <span id="test"><noscript>An ideal place where all your queries related to BSc CSIT is answered.</noscript></span>
+            </h1>
+        </div>
+        <div class="banner-form">
+            <form class="login-form">
+                <h3>Login</h3>
+                <div class="form-content clearfix">
+                    <label>Username</label>
+                    <input type="text" placeholder="Lordsagun" value="">
+                </div>
+                 <div class="form-content clearfix">
+                    <label>Password</label>
+                    <input type="text" placeholder="******" value="">
+                </div>                
+                <div class="form-content clearfix">
+                    <a class="form-btn hvr-grow" href="">Login</a>
+                    <a class="form-btn hvr-grow" href="signup.html">New User</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- banner section end -->
+
+<!-- search section start -->
+
+<section class="search-section">
+    <div class="container">
+        <form class="search-form">
+            <div class="search-wr">
+                <input type="text" placeholder="Enter Your Queries">
+                <button type="text" class="search-btn">Search</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- search section end -->
+
+<!-- ask question start -->
+
+<section>
+    <div class="container clearfix">
+        <div class="question-ask">
+            <a href="" data-toggle="modal" data-target="#ask_question">Ask a Question</a>
+        </div>
+    </div>
+</section>
+
+ <!-- Modal -->
+
+    <div class="modal fade" id="ask_question" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Ask A Question</h4>
+            </div>
+            <div class="modal-body">
+                <div class="sorry-msg">
+                    <h3><strong>Sorry</strong>...you need to be logged in to ask a question.</h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="btn btn-success">Login</a>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- ask question end -->
+
+<!-- featured questions here start -->
+
+<section class="recent-section">
+    <div class="container">
+        <div class="sem-tab">            
+            <ul class="nav nav-pills sem-tab-head">
+                <li class="active"><a data-toggle="pill" href="#recent">Recent</a></li>
+                <li><a data-toggle="pill" href="#answered">Most Answered</a></li>
+            </ul>
+        </div>
+
+        <div class="sem-tab-all">
+            <div class="tab-content">
+                <div id="recent" class="tab-pane fade in active">
+                    <div id="no-more-tables" class="table-content clearfix">
+                        <table class="col-md-12 table-bordered table-striped table-condensed cf question-table">
+                            <tbody>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">What is Cloud Computing and its importance.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>                                    
+                                </tr>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">Differentiate between attributes and elements in XML? List some of the important attributesused in specifying elements in XML schema</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">Explain mobile computing architecture with suitable diagram.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                                 <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">What do you mean by Teleports and terrestrial links? Explain.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">Describe on behalf of the choice of hardware and software system.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <strong><a href="">View All</a></strong>
+                    </div>
+                </div>
+                <div id="answered" class="tab-pane fade">
+                    <div id="no-more-tables" class="table-content clearfix">
+                        <table class="col-md-12 table-bordered table-striped table-condensed cf question-table">
+                            <tbody>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">Differentiate between attributes and elements in XML? List some of the important attributes used in specifying elements in XML schema.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>                                    
+                                </tr>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">What do you mean by Teleports and terrestrial links? Explain.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">Describe on behalf of the choice of hardware and software system.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                                 <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">What do you mean by Teleports and terrestrial links? Explain.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">Describe on behalf of the choice of hardware and software system.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                       
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>        
+</section>
+
+
+<!-- featured questions here end -->
+
+
+<!-- semester wise section first -->
+
+<section class="recent-section semester-section">
+    <div class="container">
+        <div class="sem-tab">            
+            <ul class="nav nav-pills sem-tab-head">
+                <li class="active"><a data-toggle="pill" href="#first">1st Sem</a></li>
+                <li><a data-toggle="pill" href="#second">2nd Sem</a></li>
+                <li><a data-toggle="pill" href="#third">3rd Sem</a></li>
+                <li><a data-toggle="pill" href="#forth">4th Sem</a></li>
+                <li><a data-toggle="pill" href="#fifth">5th Sem</a></li>
+                <li><a data-toggle="pill" href="#sixth">6th Sem</a></li>
+                <li><a data-toggle="pill" href="#fifth">7th Sem</a></li>
+                <li><a data-toggle="pill" href="#sixth">8th Sem</a></li>
+            </ul>
+        </div>
+
+        <div class="sem-tab-all">
+            <div class="tab-content">
+                <div id="first" class="tab-pane fade in active">
+                    <div id="no-more-tables" class="table-content clearfix">
+                        <table class="col-md-12 table-bordered table-striped table-condensed cf question-table">
+                            <tbody>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">What is Cloud Computing and its importance.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>                                    
+                                </tr>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">Differentiate between attributes and elements in XML? List some of the important attributesused in specifying elements in XML schema</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">Explain mobile computing architecture with suitable diagram.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                                 <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">What do you mean by Teleports and terrestrial links? Explain.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">Describe on behalf of the choice of hardware and software system.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <strong><a href="">View All</a></strong>
+                    </div>
+                </div>
+                <div id="second" class="tab-pane fade">
+                    <div id="no-more-tables" class="table-content clearfix">
+                        <table class="col-md-12 table-bordered table-striped table-condensed cf question-table">
+                            <tbody>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">Differentiate between attributes and elements in XML? List some of the important attributes used in specifying elements in XML schema.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>                                    
+                                </tr>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">What do you mean by Teleports and terrestrial links? Explain.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">Describe on behalf of the choice of hardware and software system.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                                 <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">What do you mean by Teleports and terrestrial links? Explain.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="question">
+                                        <a href="" class="question">Describe on behalf of the choice of hardware and software system.</a>
+                                        <span class="asked">Asked on 30/09/2018</span>
+                                    </td>
+                                    <td data-title="subject" class="numeric">subject</td>
+                                    <td data-title="username" class="numeric"><a href="" class="username">User Name</a></td>
+                                    <td data-title="answer" class="numeric">12<br>Answers</td>
+                                    <td data-title="views" class="numeric">100<br>Views</td>
+                                </tr>
+                       
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        
+</section>
+
+<!-- semester wise section end -->
+
+{% endblock %}
+

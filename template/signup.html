@@ -1,0 +1,73 @@
+{% extends 'master/master.html' %}
+{% load staticfiles %}
+
+
+{% block title%} Home {% endblock %}
+
+{% block body %}
+
+{% include 'partials/header.html' %}
+
+
+
+<!-- signup body start -->
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6 col-sm-12">
+                <div class="signup-wr">
+                    {% if errmsg %}
+                    <div class="alert alert-danger">{{errmsg}}</div>
+                    {% endif %}
+                    <h3>Create a New Account</h3>
+                    <form action="{% url 'signup' %}" method="POST" role="form">
+                      {% for f in form %}
+                        <label>
+                            {{f}}
+                            <ul style="color:red;">
+                              {% for error in f.errors %}
+                                <li>{{error}}</li>
+                              {% endfor %}
+                            </ul>
+                        </label>
+
+                      {% endfor %}
+                      {% csrf_token %}
+                      <label>
+                          <input type="submit" value="Create Account">
+                      </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- signup body end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

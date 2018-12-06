@@ -18,14 +18,12 @@ from django.contrib import admin
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-from django.conf.urls import url
-from django.contrib.auth import views as auth_views
-
-
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home,name="home"),
-    url(r'^signup', views.signup,name="signup"),
-    url(r'^login/',auth_views.login,{'template_name':'login.html'},name="login"),
+    url(r'^dashboard$',views.dashboard,name='dashboard'),
+    url(r'^question',views.question,name='question'),
+    url(r'^syllabus/$',views.syllabus,name='syllabus'),
+    url(r'^syllabus_detail/(?P<id>[0-9]+)', views.syllabus_detail, name='syllabus_detail')
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

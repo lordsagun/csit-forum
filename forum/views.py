@@ -1,7 +1,7 @@
-from django.shortcuts import render,redirect
-from django.contrib.auth.forms  import UserCreationForm
-from myaccount.forms import SignupForm
-
+from django.http import HttpResponse
+from django.shortcuts import render
+from myaccount.models import Myuser
+from theory.models import Semester,Syllabus
 
 def home(request):
     context={
@@ -10,25 +10,26 @@ def home(request):
     return render(request,'index.html')
 
 
-def signup(request):
-    if request.method=='GET':
-        context={
-        'form': SignupForm(),
-        }
-        return render(request,'signup.html',context)
-    else:
-        form=SignupForm(request.POST)
-        if form.is_valid():
-            try:
-                password= request.POST.get('password')
-                re_password = request.POST.get('re_password')
-                if password==re_password:
-                    form.save()
-                    return redirect('login')
-                else:
-                    return render(request,'signup.html',{'form':form,'errmsg':'Password field didnt match.'})
+def dashboard(request):
+    context={
+    # 'user': Myuser.objects.get(Myuser_id=request.user.id)
+    }
+    return render(request,'dashboard.html',context)
 
-            except:
-                return render(request,'signup.html',{'form':form})
-        else:
-            return render(request,'signup.html',{'form':form,'errmsg':'Something went worng'})
+def question(request):
+    return render(request,'question.html')
+
+
+def syllabus(request):
+    context={
+    'sem':Semester.objects.all()
+    }
+    return render(request,'syllabus.html',context)
+
+
+def syllabus_detail(request,id):
+    sem:Semester.objects.get(semester_id=id)
+    context={
+    'sy': Syllabus.objects.filter(sem_id=sem.id)
+    }
+    return render(request,'sy_detail')

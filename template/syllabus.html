@@ -1,0 +1,48 @@
+{% extends 'master/master.html' %}
+{% load staticfiles %}
+
+
+{% block title%} Syllabus {% endblock %}
+
+{% block body %}
+
+{% include 'partials/header.html' %}
+
+<!-- listing body start -->
+
+<section class="listing-banner">
+    <div class="list-banner">
+        <span>
+            <h1>Syllabus</h1>
+        </span>
+    </div>
+</section>
+
+
+<section class="listing-all">
+    <div class="container">
+        <div class="row">
+            <div class="flex-container">
+              {% for s in sem %}
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="listing-wr">
+                        <a href="" class="img-wr">
+                            <span><img src="images/folder.png" alt="folder"></span>
+                        </a>
+                        <div class="list-det">
+                            <a href="{% url 'syllabus_detail' s.id %}">
+                                {{ s.semester_name }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- listing body end -->
+
+{% endblock %}

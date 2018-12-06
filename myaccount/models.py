@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser,BaseUserManager
+from phone_field import PhoneField
 
 
 # Create your models here.
@@ -37,10 +38,8 @@ class Myuser(AbstractBaseUser):
     organization = models.CharField(max_length=50)
     email = models.EmailField(verbose_name='email address',max_length=255,unique=False)
     address = models.CharField(max_length=100)
-    phone =  models.CharField(max_length=10)
+    phone =  PhoneField(blank=True, help_text='Contact phone number')
     points = models.IntegerField(null=True)
-    password = models.CharField(max_length=30)
-    re_password = models.CharField(max_length=30)
 
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)

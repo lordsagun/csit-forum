@@ -1,0 +1,71 @@
+{% extends 'master/master.html' %}
+{% load staticfiles %}
+
+
+{% block title%} Question {% endblock %}
+
+{% block body %}
+
+{% include 'partials/header.html' %}
+
+<!-- question body start -->
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <div class="question-section">
+                    <h3>Ask a Question</h3>
+                    <form class="" action="">
+                        <textarea placeholder="Question Here"></textarea>
+                        <a href="{% url 'home' %}" class="btn btn-primary">Ask</a>
+                    </form>
+                    <div class="rules-section">
+                        <h3>Rules and Regulations</h3>
+                        <ul>
+                            <li>Rule 1</li>
+                            <li>Rule 2</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="question-sdbar">
+                    <div class="sd-single">
+                        <h3>Recent Questions</h3>
+                        <ul>
+                            <li><a href="">What is cloud computing?</a></li>
+                            <li><a href="">What is cloud computing?</a></li>
+                            <li><a href="">Whatasdf ads fasd fasd fasd fdsa fsad fsda fsdaing?</a></li>
+                            <li><a href="">What is cloud kjs flksda fjklsda jflskd jfsaldkfj?</a></li>
+                        </ul>
+                    </div>
+                    <div class="sd-single">
+                        <h3>Most Answered</h3>
+                        <ul>
+                            <li><a href="">What is cloud computing?</a></li>
+                            <li><a href="">What is cloud computing?</a></li>
+                            <li><a href="">Whatasdf ads fasd fasd fasd fdsa fsad fsda fsdaing?</a></li>
+                            <li><a href="">What is cloud kjs flksda fjklsda jflskd jfsaldkfj?</a></li>
+                        </ul>
+                    </div>
+                    <div class="sd-single">
+                        <h3>Other Resources</h3>
+                        <ul>
+                            <li><a href="">Notes</a></li>
+                            <li><a href="">Syllabus</a></li>
+                            <li><a href="">Old Questins</a></li>
+                            <li><a href="">Result</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- question body end -->
+
+
+{% endblock %}

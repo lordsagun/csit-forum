@@ -1029,63 +1029,6 @@ box-shadow: 0px 0px 5px 2px rgba(74,83,255,0.15);
 /*question page end*/
 
 
-/*question single section start*/
 
-.question-single-section{
-  padding: 40px 0;
-}
-.question-single-section h4{
-  display: block;
-  font-size: 32px;
-  line-height: 44px;
-  border-bottom: 1px solid #aaa;
-  padding-bottom: 15px;
-  margin-bottom: 10px;
-}
-.question-single-section p{
-  display: block;
-  font-size: 16px;
-  line-height: 22px;
-  margin-bottom: 10px;
-}
-.answer{
-  margin-top: 30px;
-}
-.answer .user-img{
-  float: left;
-  width: 90px;
-  height: 90px;
-  margin-right: 20px;
-}
-.answer .user-img img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.answer .user-ans{
-  float: left;
-  width: calc(100% - 140px);
-}
-.answer .user-ans p{
-  font-size: 14px;
-  line-height: 22px;
-}
-.answer .user-ans .react{
-  margin-top: 15px;
-}
-.answer .user-ans .react a{
-  float: left;
-  font-size: 13px;
-  color: #000;
-  margin-right: 20px;
-}
-.answer .user-ans .react a i{
-  float: left;
-  margin-right: 10px;
-}
-.re-ans{
-  margin-left: 20px;
-  margin-top: 20px;
-}
 
-/*quesiton single section end*/
+

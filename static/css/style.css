@@ -20,14 +20,14 @@ table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
 input,select{vertical-align:middle}
 li{list-style:none}
-.clearfix:before, .clearfix:after { 
-  content: " "; 
-  display: table; 
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
 }
 .flex-container {
     display: flex;
     flex-flow: row wrap;
-} 
+}
 a:hover{
   text-decoration: none;
 }
@@ -216,7 +216,7 @@ nav .menu li{
   padding: 10px 20px;
 }
 nav .menu li a {
-  display: block; 
+  display: block;
   text-decoration: none;
   color: #3a3a3a;
   font-size: 14px;
@@ -431,31 +431,31 @@ nav .drop-menu li a{
 
 
 @media only screen and (max-width: 800px) {
-    
+
     /* Force table to not be like tables anymore */
-  #no-more-tables table, 
-  #no-more-tables thead, 
-  #no-more-tables tbody, 
-  #no-more-tables th, 
-  #no-more-tables td, 
-  #no-more-tables tr { 
-    display: block; 
+  #no-more-tables table,
+  #no-more-tables thead,
+  #no-more-tables tbody,
+  #no-more-tables th,
+  #no-more-tables td,
+  #no-more-tables tr {
+    display: block;
   }
- 
+
   /* Hide table headers (but not display: none;, for accessibility) */
-  #no-more-tables thead tr { 
+  #no-more-tables thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
- 
-  
-  #no-more-tables td { 
+
+
+  #no-more-tables td {
     /* Behave  like a "row" */
     border: none;
-    border-bottom: 1px solid #eee; 
+    border-bottom: 1px solid #eee;
     position: relative;
-    padding-left: 2%; 
+    padding-left: 2%;
     white-space: normal;
     padding-right: 2%;
     float: left;
@@ -463,21 +463,21 @@ nav .drop-menu li a{
   #no-more-tables tr td:first-child {
     display: block;
     width: 100%;
-  } 
+  }
 
-  #no-more-tables td:before { 
+  #no-more-tables td:before {
     /* Now like a table header */
     position: absolute;
     /* Top/left values mimic padding */
     top: 6px;
     left: 6px;
-    width: 45%; 
-    padding-right: 10px; 
+    width: 45%;
+    padding-right: 10px;
     white-space: nowrap;
     text-align:left;
     font-weight: bold;
   }
- 
+
   /*
   Label the data
   */
@@ -513,7 +513,7 @@ footer .footer-about{
   font-size: 24px;
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 .footer-sec ul li{
   display: block;
@@ -706,7 +706,7 @@ footer .footer-about{
 }
 .team-all{
     background-image: url("../images/team.jpg");
-    height: 200px; 
+    height: 200px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -867,7 +867,7 @@ footer .footer-about{
 
 .listing-banner{
   background-image: url("../images/banner2.jpg");
-  height: 180px; 
+  height: 180px;
   background-attachment: fixed;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -916,9 +916,9 @@ footer .footer-about{
 .listing-wr .img-wr span{
   display: table-cell;
   vertical-align: middle;
-} 
+}
 .listing-wr .img-wr img{
-  height: 80px;
+  height: 70px;
   width: 60px;
 }
 .listing-wr .img-wr:hover{
@@ -1007,7 +1007,7 @@ box-shadow: 0px 0px 5px 2px rgba(74,83,255,0.15);
 }
 .question-sdbar .sd-single ul{
     margin-bottom: 30px;
-} 
+}
 .question-sdbar .sd-single ul li a{
     display: block;
     font-size: 15px;
@@ -1027,8 +1027,3 @@ box-shadow: 0px 0px 5px 2px rgba(74,83,255,0.15);
 
 
 /*question page end*/
-
-
-
-
-

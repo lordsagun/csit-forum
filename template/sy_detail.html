@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 
-{% block title%} Syllabus | {{ sy.semester_name}}  {% endblock %}
+{% block title%} {{ s.semester_name }}  {% endblock %}
 
 {% block body %}
 
@@ -13,28 +13,105 @@
 <section class="listing-banner">
     <div class="list-banner">
         <span>
-            <h1>{{ sy.semester_name}}</h1>
+            <h1>{{ s.semester_name }}</h1>
+            <h1>{{ yr.year }}</h1>
         </span>
     </div>
 </section>
 
+<ul class="breadcrumb">
+  <li><a href="#">Home</a></li>
 
+</ul>
 <section class="listing-all">
     <div class="container">
         <div class="row">
             <div class="flex-container">
+              {% for x in sy %}
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="listing-wr">
-                        <a href="" class="img-wr">
-                            <span><img src="images/folder.png" alt="folder"></span>
+                        <a href="{{MEDIA_URL}}{{s.syllabus_file.url}}" target="_blank" class="img-wr">
+                            <span><img src="{% static 'images/pdf.png' %}" alt="folder"></span>
                         </a>
                         <div class="list-det">
-                            <a href="">
-                              {{ sy.subject }}
+                            <a href="{{MEDIA_URL}}{{s.syllabus_file.url}}" target="_blank">
+                              {{ x.subject }}
                             </a>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
+
+                {% for y in year %}
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="listing-wr">
+                          <a href="{% url 'oldquestions_sub' y.id %}"  class="img-wr">
+                              <span><img src="{% static 'images/folder.png' %}" alt="folder"></span>
+                          </a>
+                          <div class="list-det">
+                              <a href="{% url 'oldquestions_sub' y.id %}" >
+                                {{ y.year }}
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  {% endfor %}
+                  {% for o in old %}
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="listing-wr">
+                            <a href="{{MEDIA_URL}}{{o.old_question_file.url}}" target="_blank" class="img-wr">
+                                <span><img src="{% static 'images/pdf.png' %}" alt="folder"></span>
+                            </a>
+                            <div class="list-det">
+                                <a href="{{MEDIA_URL}}{{o.old_question_file.url}}" target="_blank">
+                                  {{ o.subject }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for n in note %}
+                      <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="listing-wr">
+                              <a href="{{MEDIA_URL}}{{n.note_file.url}}" target="_blank" class="img-wr">
+                                  <span><img src="{% static 'images/pdf.png' %}" alt="folder"></span>
+                              </a>
+                              <div class="list-det">
+                                  <a href="{{MEDIA_URL}}{{n.note_file.url}}" target="_blank">
+                                    {{ n.subject }}
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      {% endfor %}
+                      {% for y in yr %}
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="listing-wr">
+                                <a href="{% url 'solutions_sub' y.id %}"  class="img-wr">
+                                    <span><img src="{% static 'images/folder.png' %}" alt="folder"></span>
+                                </a>
+                                <div class="list-det">
+                                    <a href="{% url 'solutions_sub' y.id %}" >
+                                      {{ y.year }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        {% for s in sol %}
+                          <div class="col-md-3 col-sm-6 col-xs-12">
+                              <div class="listing-wr">
+                                  <a href="{{MEDIA_URL}}{{s.solution_file.url}}" target="_blank" class="img-wr">
+                                      <span><img src="{% static 'images/pdf.png' %}" alt="folder"></span>
+                                  </a>
+                                  <div class="list-det">
+                                      <a href="{{MEDIA_URL}}{{s.solution_file.url}}" target="_blank">
+                                        {{ s.subject }}
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                          {% endfor %}
             </div>
         </div>
     </div>

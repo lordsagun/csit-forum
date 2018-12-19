@@ -1,0 +1,30 @@
+// client side chat application
+
+boolean flag = true;
+while(flag){
+Scanner sca = new Scanner (System.in);
+String chat=sca.nextLine();
+dos.writeUTF(chat);
+S.o.p(dis.readUTF());
+if (chat.equals("stop")){
+flag = false ;
+sca.close;
+}}
+
+
+//server side chat application
+
+ 
+boolean flag = true;
+while(flag){
+String sc=dis.readUTF();
+sop(sc);
+
+Scanner sca = new Scanner (System.in);
+String chat=sca.nextLine();
+dos.writeUTF(chat);
+
+if (chat.equals("stop")){
+flag = false ;
+sca.close;
+}}

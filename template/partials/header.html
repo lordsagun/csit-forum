@@ -16,28 +16,32 @@
                 <button class="toggle-bar"><span></span></button>
             </div>
             <ul class="menu">
-                <li class="dropper"><a href="javaScript:void(0)">Syllabus</a>
+                <li class="dropper"><a href="{% url 'syllabus' %}">Syllabus</a>
                     <ul class="drop-menu">
-                        <li><a href="">First Semester</a></li>
-                        <li><a href="">Second Semester</a></li>
+                      {% for s in sem %}
+                        <li><a href="{% url 'syllabus_detail' s.id %}">{{ s.semester_name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </li>
-                <li class="dropper"><a href="javaScript:void(0)">Old Questions</a>
+                <li class="dropper"><a href="{% url 'old_questions' %}">Old Questions</a>
                     <ul class="drop-menu">
-                        <li><a href="">First Semester</a></li>
-                        <li><a href="">Second Semester</a></li>
+                      {% for s in sem %}
+                        <li><a href="{% url 'oldquestions_detail' s.id %}">{{ s.semester_name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </li>
-                <li class="dropper"><a href="javaScript:void(0)">Notes</a>
+                <li class="dropper"><a href="{% url 'notes' %}">Notes</a>
                     <ul class="drop-menu">
-                        <li><a href="">First Semester</a></li>
-                        <li><a href="">Second Semester</a></li>
+                      {% for s in sem %}
+                        <li><a href="{% url 'notes_details' s.id %}">{{ s.semester_name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </li>
-                <li class="dropper"><a href="javaScript:void(0)">Solutions</a>
+                <li class="dropper"><a href="{% url 'solutions' %}">Solutions</a>
                     <ul class="drop-menu">
-                        <li><a href="">First Semester</a></li>
-                        <li><a href="">Second Semester</a></li>
+                      {% for s in sem %}
+                        <li><a href="{% url 'solutions_detail' s.id %}">{{ s.semester_name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </li>
                 <li><a href="#">Result</a></li>
